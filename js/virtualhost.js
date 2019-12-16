@@ -15,11 +15,11 @@ console.log('url ',url);
 let head = document.getElementsByTagName('head')[0];
     head.innerHTML = head.innerHTML.replace(/%title%/g,'site: '+host);
 let body = document.getElementsByTagName('body')[0];
-let buf = body.innerHTML.replace(/%url%/g,url);
-    buf = buf.replace(/%domain%/g,domain);
-    buf = buf.replace(/%origin%/g,origin);
-    buf = buf.replace(/%email%/g,email);
-    body.innerHTML = buf;
+let inner = body.innerHTML.replace(/%url%/g,url);
+    inner = inner.replace(/%domain%/g,domain);
+    inner = inner.replace(/%origin%/g,origin);
+    inner = inner.replace(/%email%/g,email);
+    body.innerHTML = inner;
 
 
 fetch(index_url)
